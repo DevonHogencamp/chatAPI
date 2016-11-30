@@ -7,8 +7,18 @@
 
 module.exports = {
 
-  attributes: {
-
-  }
+    attributes: {
+        content: {
+            required: true,
+            type: 'string'
+        },
+        channel: {
+            required: true,
+            type: 'string'
+        },
+        user: {
+            required: true,
+            type: 'string'
+        }
+    }
 };
-

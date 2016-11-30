@@ -1,9 +1,53 @@
 {
   "data": {
-    "user": []
+    "user": [
+      {
+        "name": "Devon",
+        "password": "password",
+        "createdAt": "2016-11-30T21:11:44.865Z",
+        "updatedAt": "2016-11-30T21:11:44.865Z",
+        "id": 2
+      }
+    ],
+    "channel": [],
+    "msg": []
   },
   "schema": {
     "user": {
+      "name": {
+        "type": "string"
+      },
+      "password": {
+        "type": "string"
+      },
+      "id": {
+        "type": "integer",
+        "autoIncrement": true,
+        "primaryKey": true,
+        "unique": true
+      },
+      "createdAt": {
+        "type": "datetime"
+      },
+      "updatedAt": {
+        "type": "datetime"
+      }
+    },
+    "channel": {
+      "id": {
+        "type": "integer",
+        "autoIncrement": true,
+        "primaryKey": true,
+        "unique": true
+      },
+      "createdAt": {
+        "type": "datetime"
+      },
+      "updatedAt": {
+        "type": "datetime"
+      }
+    },
+    "msg": {
       "id": {
         "type": "integer",
         "autoIncrement": true,
@@ -20,7 +64,9 @@
   },
   "counters": {
     "user": {
-      "id": 1
-    }
+      "id": 2
+    },
+    "channel": {},
+    "msg": {}
   }
 }
