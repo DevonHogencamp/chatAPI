@@ -26,7 +26,7 @@ module.exports.policies = {
   *                                                                          *
   ***************************************************************************/
 
-  '*': false,
+  // '*': true,
 
   /***************************************************************************
   *                                                                          *
@@ -48,7 +48,4 @@ module.exports.policies = {
 		// before letting any users feed our rabbits
 		// feed : ['isNiceToAnimals', 'hasRabbitFood']
 	// }
-    UserController: {
-        '*': ['isAdmin']
- }
 };
