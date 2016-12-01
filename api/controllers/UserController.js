@@ -57,14 +57,19 @@ module.exports = {
             return res.jsonx(user);
         });
     },
-    adminOnly: function (req, res) {
-          User.find({admin: true}).exec(function (err, users) {
-              if (err) {
-                  return res.serverError(err);
-              }
-
-              return res.jsonx(users);
-          });
-      }
-
+    adminOnly: function(req, res) {
+        User.find({
+            admin: true
+        }).exec(function(err, users) {
+            if (err) {
+                return res.serverError(err);
+            }
+            return res.jsonx(users);
+        });
+    },
+    UserController: {
+        find: true,
+        destroy: true,
+        vipOnly: ['isAdmin']
+    }
 };
