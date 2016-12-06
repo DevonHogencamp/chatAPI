@@ -57,9 +57,9 @@ module.exports = {
             return res.jsonx(user);
         });
     },
-    adminOnly: function(req, res) {
+    vipOnly: function(req, res) {
         User.find({
-            admin: true
+            vip: true
         }).exec(function(err, users) {
             if (err) {
                 return res.serverError(err);
@@ -70,6 +70,6 @@ module.exports = {
     UserController: {
         find: true,
         destroy: true,
-        vipOnly: ['isAdmin']
+        vipOnly: ['isvip']
     }
 };
