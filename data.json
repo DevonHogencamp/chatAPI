@@ -1,0 +1,12 @@
+{
+    "name": "Pat",
+    "password": "1234",
+    "admin": false,
+    "isEnabled": true
+}
+
+{
+    "content": "Hello World!!!",
+    "channel": "general",
+    "user": "Pat"
+}
